@@ -1,0 +1,46 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Страница-1" id="hvpPyBo0uVT4BY9p_Zcw">
+    <mxGraphModel dx="616" dy="544" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="mqSU68st_JOvFVbbG_Ix-6" edge="1" parent="1" source="mqSU68st_JOvFVbbG_Ix-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="mqSU68st_JOvFVbbG_Ix-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mqSU68st_JOvFVbbG_Ix-7" connectable="0" parent="mqSU68st_JOvFVbbG_Ix-6" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;div&gt;1:N&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0889" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mqSU68st_JOvFVbbG_Ix-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;tree&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;id BIGINT PK&lt;/div&gt;&lt;div&gt;inventory_number VARCHAR(40)&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;species VARCHAR(100)&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;location VARCHAR(255)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="200" as="geometry" />
+        </mxCell>
+        <mxCell id="mqSU68st_JOvFVbbG_Ix-8" edge="1" parent="1" source="mqSU68st_JOvFVbbG_Ix-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="mqSU68st_JOvFVbbG_Ix-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mqSU68st_JOvFVbbG_Ix-11" connectable="0" parent="mqSU68st_JOvFVbbG_Ix-8" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1:N" vertex="1">
+          <mxGeometry relative="1" x="-0.2" y="-1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mqSU68st_JOvFVbbG_Ix-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="inspection&lt;br&gt;&lt;br&gt;&lt;div align=&quot;left&quot;&gt;id BIGINT PK&lt;br&gt;tree_id BIGINT FK&lt;br&gt;inspection_date DATE&lt;br&gt;condition_score INT&lt;br&gt;notes TEXT&lt;/div&gt;" vertex="1">
+          <mxGeometry height="120" width="220" x="290" as="geometry" />
+        </mxCell>
+        <mxCell id="mqSU68st_JOvFVbbG_Ix-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="work_request&lt;br&gt;&lt;br&gt;&lt;div align=&quot;left&quot;&gt;id BIGINT PK&lt;br&gt;inspection_id BIGINT FK&lt;br&gt;description TEXT&lt;br&gt;state VARCHAR(30)&lt;br&gt;f1 DOUBLE&lt;br&gt;f2 DOUBLE&lt;br&gt;f3 DOUBLE&lt;br&gt;risk_index DOUBLE&lt;/div&gt;" vertex="1">
+          <mxGeometry height="180" width="160" x="320" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="mqSU68st_JOvFVbbG_Ix-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="work_order&lt;br&gt;&lt;br&gt;&lt;div align=&quot;left&quot;&gt;id BIGINT PK&lt;br&gt;work_request_id BIGINT FK&lt;br&gt;description TEXT&lt;br&gt;planned_date DATE&lt;br&gt;completed_date DATE&lt;br&gt;executor VARCHAR(120)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="140" width="200" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="mqSU68st_JOvFVbbG_Ix-12" edge="1" parent="1" source="mqSU68st_JOvFVbbG_Ix-4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.005;entryY=0.636;entryDx=0;entryDy=0;entryPerimeter=0;" target="mqSU68st_JOvFVbbG_Ix-5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mqSU68st_JOvFVbbG_Ix-13" connectable="0" parent="mqSU68st_JOvFVbbG_Ix-12" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="1:N" vertex="1">
+          <mxGeometry relative="1" x="0.2" y="2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
